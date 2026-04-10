@@ -1,0 +1,58 @@
+<nav class="bg-gray-900 text-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+
+   
+    <a routerLink="/" class="text-xl font-bold tracking-wide hover:text-indigo-400 transition">
+      zack messah ghostjr0007
+
+    </a>
+
+    
+    <ul class="hidden md:flex gap-6 text-sm font-medium">
+      <li>
+        <a routerLink="/accueil"
+           routerLinkActive="text-indigo-400 border-b-2 border-indigo-400"
+           class="hover:text-indigo-400 transition pb-1">
+          Accueil
+        </a>
+      </li>
+      <li>
+        <a routerLink="/a-propos"
+           routerLinkActive="text-indigo-400 border-b-2 border-indigo-400"
+           class="hover:text-indigo-400 transition pb-1">
+          À propos
+        </a>
+      </li>
+      <li>
+        <a routerLink="/contact"
+           routerLinkActive="text-indigo-400 border-b-2 border-indigo-400"
+           class="hover:text-indigo-400 transition pb-1">
+          Contact
+        </a>
+      </li>
+    </ul>
+
+    
+    <button (click)="toggleMenu()" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path *ngIf="!menuOuvert"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+        <path *ngIf="menuOuvert"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  
+  <div *ngIf="menuOuvert"
+       class="md:hidden bg-gray-800 px-4 pb-4 flex flex-col gap-3 text-sm font-medium">
+    <a routerLink="/accueil" routerLinkActive="text-indigo-400"
+       class="hover:text-indigo-400 transition" (click)="toggleMenu()">Accueil</a>
+    <a routerLink="/a-propos" routerLinkActive="text-indigo-400"
+       class="hover:text-indigo-400 transition" (click)="toggleMenu()">À propos</a>
+    <a routerLink="/contact" routerLinkActive="text-indigo-400"
+       class="hover:text-indigo-400 transition" (click)="toggleMenu()">Contact</a>
+  </div>
+</nav>
