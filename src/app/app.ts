@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Maliste } from './maliste/maliste';
+import { ProductDetail } from './product-detail/product-detail';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Maliste],
+  imports: [RouterOutlet,ProductDetail],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
