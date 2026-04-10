@@ -17,17 +17,38 @@
         </a>
       </li>
       <li>
-        <a routerLink="/a-propos"
+        <a routerLink="/login"
            routerLinkActive="text-indigo-400 border-b-2 border-indigo-400"
            class="hover:text-indigo-400 transition pb-1">
-          À propos
+          Login
         </a>
       </li>
       <li>
-        <a routerLink="/contact"
+        <a routerLink="/register"
            routerLinkActive="text-indigo-400 border-b-2 border-indigo-400"
            class="hover:text-indigo-400 transition pb-1">
-          Contact
+          Register
+        </a>
+      </li>
+            <li>
+        <a routerLink="/list"
+           routerLinkActive="text-indigo-400 border-b-2 border-indigo-400"
+           class="hover:text-indigo-400 transition pb-1">
+          List
+        </a>
+      </li>
+            <li>
+        <a routerLink="/details"
+           routerLinkActive="text-indigo-400 border-b-2 border-indigo-400"
+           class="hover:text-indigo-400 transition pb-1">
+          Details
+        </a>
+      </li>
+            <li>
+        <a routerLink="/profile"
+           routerLinkActive="text-indigo-400 border-b-2 border-indigo-400"
+           class="hover:text-indigo-400 transition pb-1">
+          Profile
         </a>
       </li>
     </ul>
@@ -48,11 +69,17 @@
   
   <div *ngIf="menuOuvert"
        class="md:hidden bg-gray-800 px-4 pb-4 flex flex-col gap-3 text-sm font-medium">
-    <a routerLink="/accueil" routerLinkActive="text-indigo-400"
+    <a routerLink="/" routerLinkActive="text-indigo-400"
        class="hover:text-indigo-400 transition" (click)="toggleMenu()">Accueil</a>
-    <a routerLink="/a-propos" routerLinkActive="text-indigo-400"
-       class="hover:text-indigo-400 transition" (click)="toggleMenu()">À propos</a>
-    <a routerLink="/contact" routerLinkActive="text-indigo-400"
-       class="hover:text-indigo-400 transition" (click)="toggleMenu()">Contact</a>
+    <a routerLink="/login" routerLinkActive="text-indigo-400"
+       class="hover:text-indigo-400 transition" (click)="toggleMenu()">Login</a>
+    <a routerLink="/register" routerLinkActive="text-indigo-400"
+       class="hover:text-indigo-400 transition" (click)="toggleMenu()">Register</a>
+        <a routerLink="/list" routerLinkActive="text-indigo-400"
+       class="hover:text-indigo-400 transition" (click)="toggleMenu()">List</a>
+        <a routerLink="/details" routerLinkActive="text-indigo-400"
+       class="hover:text-indigo-400 transition" (click)="toggleMenu()">Details</a>
+               <a routerLink="/profile" routerLinkActive="text-indigo-400"
+       class="hover:text-indigo-400 transition" (click)="toggleMenu()">Profile</a>
   </div>
 </nav>
