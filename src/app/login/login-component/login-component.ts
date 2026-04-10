@@ -1,5 +1,4 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { AuthService } from '../../services/authService/auth-service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators,  } from '@angular/forms';
 import { required } from '@angular/forms/signals';
 
@@ -16,8 +15,6 @@ export class LoginComponent implements OnInit {
   isLogged = signal( false)
   formGroup : FormGroup
 
-
-private authService =inject(AuthService)
 private formbuilder =inject(FormBuilder)
 
 constructor()
@@ -31,7 +28,6 @@ constructor()
 
 
 ngOnInit(): void {
-  this.isLogged =this.authService.IsLogged
 }
 
  login()
@@ -40,13 +36,13 @@ ngOnInit(): void {
     {
       const email = this.formGroup.value["email"];
       const password = this.formGroup.value["password"];
-      this.authService.login(email,password);
+
     }
   }
 
  logout()
   {
-  this.authService.logout();
+
   }
  
 
