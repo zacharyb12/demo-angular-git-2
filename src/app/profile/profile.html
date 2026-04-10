@@ -1,0 +1,27 @@
+<div class="profile-container">
+  <div class="card">
+    <h2>Mon Profil</h2>
+
+    <div class="profile-item">
+      <strong>Nom :</strong>
+      <span>{{ user.name }}</span>
+    </div>
+
+    <div class="profile-item">
+      <strong>Email :</strong>
+      <span>{{ user.email }}</span>
+    </div>
+
+    <div class="profile-item">
+      <strong>Rôle :</strong>
+      <span>{{ user.role }}</span>
+    </div>
+
+    <div class="profile-item">
+      <strong>Bio :</strong>
+      <p>{{ user.bio }}</p>
+    </div>
+
+    <button (click)="editProfile()">Modifier</button>
+  </div>
+</div>
